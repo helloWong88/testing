@@ -12,12 +12,13 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-name:{
-  type: "string"
-},
-age:{
-  type: "string"
-}
+    name: {
+      type: "string"
+    },
+    
+    age: {
+      type: "number"
+    },
 
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

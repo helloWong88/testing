@@ -15,11 +15,14 @@ module.exports = {
     name: {
       type: "string"
     },
-    
+
     age: {
       type: "number"
     },
-
+    birthDate: {
+      type: 'ref',
+      columnType: 'datetime'
+    },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -33,7 +36,7 @@ module.exports = {
       collection: 'User',
       via: 'supervises'
     },
-    
+
   },
   getInvalidIdMsg: function (opts) {
 
@@ -42,9 +45,9 @@ module.exports = {
 
     return null;        // falsy
 
-},
+  },
 
-  
+
 
 };
 

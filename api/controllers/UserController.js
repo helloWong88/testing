@@ -33,19 +33,24 @@ module.exports = {
 
         req.session.regenerate(function (err) {
 
-            if (err) return res.serverError(err);
+            // if (err) return res.serverError(err);
 
-            req.session.username = req.body.username;
+            // req.session.username = req.body.username;
 
-            sails.log("Session: " + JSON.stringify(req.session));
+            // sails.log("Session: " + JSON.stringify(req.session));
 
-            // return res.json(req.session);
+            // // return res.json(req.session);
 
-            return res.ok("Login successfully");
-
+            // return res.ok("Login successfully");
+            if (req.wantsJSON){
+                return res.redirect('/person/index');
+            } else {
+                return res.ok("Login successfully");
+            }
         });
 
     },
+    
     logout: async function (req, res) {
 
         req.session.destroy(function (err) {
